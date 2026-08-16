@@ -1,0 +1,37 @@
+# 05 — Optimized Dry Run
+
+## Complete Expert-Level Program
+
+```java
+public class FindMiddleOfLinkedList {
+    static class Node { int data; Node next; Node(int data) { this.data = data; } }
+
+    static Node findMiddle(Node head) {
+        Node slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    public static void main(String[] args) {
+        Node head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
+        head.next.next.next.next = new Node(5);
+        System.out.println("Middle = " + findMiddle(head).data);
+    }
+}
+```
+
+## Dry Run
+
+Track the pointers, node links, stack contents or queue contents after every important operation.
+
+### Final Result
+
+```text
+Middle = 3
+```

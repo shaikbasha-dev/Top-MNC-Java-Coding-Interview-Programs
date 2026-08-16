@@ -1,0 +1,52 @@
+# 05 — Optimized Dry Run
+
+## Complete Expert-Level Program
+
+```java
+import java.util.*;
+
+public class GenerateAllPermutations {
+    static void generate(int[] numbers, int index) {
+        if (index == numbers.length) {
+            System.out.println(Arrays.toString(numbers));
+            return;
+        }
+
+        for (int i = index; i < numbers.length; i++) {
+            swap(numbers, index, i);
+            generate(numbers, index + 1);
+            swap(numbers, index, i);
+        }
+    }
+
+    static void swap(int[] numbers, int i, int j) {
+        int temp = numbers[i];
+        numbers[i] = numbers[j];
+        numbers[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        generate(new int[]{1, 2, 3}, 0);
+    }
+}
+```
+
+## State Trace
+
+Start with:
+
+```text
+numbers = [1, 2, 3]
+```
+
+Then repeatedly:
+
+```text
+Choose -> Recurse -> Reach base case or reject -> Undo -> Try next choice
+```
+
+Final result:
+
+```text
+[1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,2,1], [3,1,2]
+```
