@@ -683,10 +683,10 @@ Focused on Java programming, problem solving, software development, technical le
 
 # 🌐 Connect With Me
 
-- LinkedIn
-- GitHub
-- Developer Portfolio
-- Email
+- LinkedIn: https://www.linkedin.com/in/shaikbasha-dev/
+- GitHub: https://github.com/shaikbasha-dev
+- Developer Portfolio: https://shaikbasha-dev.github.io/Developer-Portfolio-Project/
+- Email: smbashadev@gmail.com
 
 Feel free to connect for professional networking, collaboration, knowledge sharing, and discussions related to Java, Full Stack Development, programming, and technical interview preparation.
 
